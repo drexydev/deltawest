@@ -1,0 +1,526 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Buttons = Instance.new("Frame")
+local CombativeButton = Instance.new("ImageButton")
+local VisualsButton = Instance.new("ImageButton")
+local MiscsButton = Instance.new("ImageButton")
+local SkinChangerButton = Instance.new("ImageButton")
+local UIListLayout = Instance.new("UIListLayout")
+local Visuals = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local espButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local TextLabel_3 = Instance.new("TextLabel")
+local Frame_3 = Instance.new("Frame")
+local distanceButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local Combative = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local Frame_4 = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local aimlockButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_6 = Instance.new("TextLabel")
+local Misc = Instance.new("Frame")
+local TextLabel_7 = Instance.new("TextLabel")
+local Frame_5 = Instance.new("Frame")
+local TextLabel_8 = Instance.new("TextLabel")
+local bssButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_9 = Instance.new("TextLabel")
+local Frame_6 = Instance.new("Frame")
+local akmnButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_10 = Instance.new("TextLabel")
+local Frame_7 = Instance.new("Frame")
+local fgButton = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_11 = Instance.new("TextLabel")
+local Frame_8 = Instance.new("Frame")
+local asvalButton = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local TextLabel_12 = Instance.new("TextLabel")
+local Frame_9 = Instance.new("Frame")
+local staffButton = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local TextButton = Instance.new("TextButton")
+local Frame_10 = Instance.new("Frame")
+local Frame_11 = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+Frame.Position = UDim2.new(0.00885926653, 0, 0.255852848, 0)
+Frame.Size = UDim2.new(0, 498, 0, 436)
+
+--X TOGGLE
+local UserInputSevice = game:GetService("UserInputService")
+
+UserInputSevice.InputBegan:Connect(function(InputKey)
+	if InputKey.KeyCode == Enum.KeyCode.X and
+		Frame.Visible == false then
+		Frame.Visible = true
+	elseif InputKey.KeyCode == Enum.KeyCode.X and
+		Frame.Visible == true then
+		Frame.Visible = false
+	end
+end)
+--
+
+Buttons.Name = "Buttons"
+Buttons.Parent = Frame
+Buttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Buttons.BackgroundTransparency = 1.000
+Buttons.Position = UDim2.new(0, 0, 0.438073397, 0)
+Buttons.Size = UDim2.new(0, 100, 0, 100)
+
+CombativeButton.Name = "CombativeButton"
+CombativeButton.Parent = Buttons
+CombativeButton.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+CombativeButton.BorderColor3 = Color3.fromRGB(31, 31, 31)
+CombativeButton.Position = UDim2.new(0.0872285739, 0, 0.121498242, 0)
+CombativeButton.Size = UDim2.new(0, 68, 0, 68)
+CombativeButton.Image = "rbxassetid://7059266885"
+CombativeButton.MouseButton1Down:connect(function()
+	script.Parent.ScreenGui.Frame.Combative.Visible = true
+	script.Parent.ScreenGui.Frame.Misc.Visible = false
+	script.Parent.ScreenGui.Frame.Visuals.Visible = false
+end)
+
+VisualsButton.Name = "VisualsButton"
+VisualsButton.Parent = Buttons
+VisualsButton.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+VisualsButton.BorderColor3 = Color3.fromRGB(31, 31, 31)
+VisualsButton.Position = UDim2.new(0.0872285739, 0, 0.121498242, 0)
+VisualsButton.Size = UDim2.new(0, 68, 0, 68)
+VisualsButton.Image = "rbxassetid://8217650131"
+VisualsButton.MouseButton1Down:connect(function()
+	script.Parent.ScreenGui.Frame.Visuals.Visible = true
+	script.Parent.ScreenGui.Frame.Misc.Visible = false
+	script.Parent.ScreenGui.Frame.Combative.Visible = false
+end)
+
+MiscsButton.Name = "MiscsButton"
+MiscsButton.Parent = Buttons
+MiscsButton.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+MiscsButton.BorderColor3 = Color3.fromRGB(31, 31, 31)
+MiscsButton.Position = UDim2.new(0.0872285739, 0, 0.121498242, 0)
+MiscsButton.Size = UDim2.new(0, 68, 0, 68)
+MiscsButton.Image = "rbxassetid://1188759245"
+MiscsButton.MouseButton1Down:connect(function()
+	script.Parent.ScreenGui.Frame.Visuals.Visible = false
+	script.Parent.ScreenGui.Frame.Misc.Visible = true
+	script.Parent.ScreenGui.Frame.Combative.Visible = false
+end)
+
+SkinChangerButton.Name = "SkinChangerButton"
+SkinChangerButton.Parent = Buttons
+SkinChangerButton.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+SkinChangerButton.BorderColor3 = Color3.fromRGB(31, 31, 31)
+SkinChangerButton.Position = UDim2.new(0.0872285739, 0, 0.121498242, 0)
+SkinChangerButton.Size = UDim2.new(0, 68, 0, 68)
+SkinChangerButton.Image = "rbxassetid://129697950"
+
+UIListLayout.Parent = Buttons
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout.Padding = UDim.new(0, 25)
+
+Visuals.Name = "Visuals"
+Visuals.Parent = Frame
+Visuals.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Visuals.BackgroundTransparency = 1.000
+Visuals.Position = UDim2.new(0.421101779, 0, 0.541800618, 0)
+Visuals.Size = UDim2.new(0, 100, 0, 100)
+
+TextLabel.Parent = Visuals
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(-1.25, 0, -1.01560974, 0)
+TextLabel.Size = UDim2.new(0, 67, 0, 55)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "ESP"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 25.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_2.Parent = TextLabel
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.Position = UDim2.new(0, 0, 1.01019955, 0)
+Frame_2.Size = UDim2.new(0, 67, 0, 0)
+
+TextLabel_2.Parent = Visuals
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(-1.43511713, 0, -1.75725067, 0)
+TextLabel_2.Size = UDim2.new(0, 431, 0, 31)
+TextLabel_2.Font = Enum.Font.Jura
+TextLabel_2.Text = "Visuals Menu"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+espButton.Name = "espButton"
+espButton.Parent = Visuals
+espButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+espButton.Position = UDim2.new(2.41000009, 0, -0.76000011, 0)
+espButton.Size = UDim2.new(0, 29, 0, 44)
+espButton.Font = Enum.Font.SourceSans
+espButton.Text = ""
+espButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+espButton.TextSize = 14.000
+espButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://cdn.wearedevs.net/scripts/WRD%20ESP.txt'))()
+	espButton.BackgroundColor3 = Color3.fromRGB(113, 255, 48)
+end)
+
+UICorner.Parent = espButton
+
+UIAspectRatioConstraint.Parent = espButton
+
+TextLabel_3.Parent = Visuals
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(-1.25, 0, -0.215609699, 0)
+TextLabel_3.Size = UDim2.new(0, 67, 0, 55)
+TextLabel_3.Font = Enum.Font.GothamSemibold
+TextLabel_3.Text = "Distances"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 25.000
+TextLabel_3.TextWrapped = true
+TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_3.Parent = TextLabel_3
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.Position = UDim2.new(0, 0, 1.01019955, 0)
+Frame_3.Size = UDim2.new(0, 67, 0, 0)
+
+distanceButton.Name = "distanceButton"
+distanceButton.Parent = Visuals
+distanceButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+distanceButton.Position = UDim2.new(2.41000009, 0, 0.0399999321, 0)
+distanceButton.Size = UDim2.new(0, 29, 0, 44)
+distanceButton.Font = Enum.Font.SourceSans
+distanceButton.Text = ""
+distanceButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+distanceButton.TextSize = 14.000
+
+UICorner_2.Parent = distanceButton
+
+UIAspectRatioConstraint_2.Parent = distanceButton
+
+Combative.Name = "Combative"
+Combative.Parent = Frame
+Combative.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Combative.BackgroundTransparency = 1.000
+Combative.Position = UDim2.new(0.421101779, 0, 0.541800618, 0)
+Combative.Size = UDim2.new(0, 100, 0, 100)
+Combative.Visible = false
+
+TextLabel_4.Parent = Combative
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(-1.25, 0, -1.01560974, 0)
+TextLabel_4.Size = UDim2.new(0, 67, 0, 55)
+TextLabel_4.Font = Enum.Font.GothamSemibold
+TextLabel_4.Text = "Aimlock"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 25.000
+TextLabel_4.TextWrapped = true
+TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_4.Parent = TextLabel_4
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.Position = UDim2.new(0, 0, 1.01019955, 0)
+Frame_4.Size = UDim2.new(0, 67, 0, 0)
+
+TextLabel_5.Parent = Combative
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(-1.43511713, 0, -1.75725067, 0)
+TextLabel_5.Size = UDim2.new(0, 431, 0, 31)
+TextLabel_5.Font = Enum.Font.Jura
+TextLabel_5.Text = "Combative Menu"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+aimlockButton.Name = "aimlockButton"
+aimlockButton.Parent = Combative
+aimlockButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+aimlockButton.Position = UDim2.new(2.41000009, 0, -0.76000011, 0)
+aimlockButton.Size = UDim2.new(0, 29, 0, 44)
+aimlockButton.Font = Enum.Font.SourceSans
+aimlockButton.Text = ""
+aimlockButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+aimlockButton.TextSize = 14.000
+aimlockButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/drexydev/deltawest/main/aimlock'))()
+	aimlockButton.BackgroundColor3 = Color3.fromRGB(113, 255, 48)
+end)
+
+UICorner_3.Parent = aimlockButton
+
+UIAspectRatioConstraint_3.Parent = aimlockButton
+
+TextLabel_6.Parent = Combative
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(-1.25236356, 0, 1.10274959, 0)
+TextLabel_6.Size = UDim2.new(0, 395, 0, 67)
+TextLabel_6.Font = Enum.Font.GothamSemibold
+TextLabel_6.Text = "PRESS Q TO CHANGE                    PRESS LEFT CTRL TO OPEN"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 25.000
+TextLabel_6.TextWrapped = true
+TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_6.TextYAlignment = Enum.TextYAlignment.Top
+
+Misc.Name = "Misc"
+Misc.Parent = Frame
+Misc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Misc.BackgroundTransparency = 1.000
+Misc.Position = UDim2.new(0.421101779, 0, 0.541800618, 0)
+Misc.Size = UDim2.new(0, 100, 0, 100)
+Misc.Visible = false
+
+TextLabel_7.Parent = Misc
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(-1.26999998, 0, -1.69560993, 0)
+TextLabel_7.Size = UDim2.new(0, 67, 0, 55)
+TextLabel_7.Font = Enum.Font.GothamSemibold
+TextLabel_7.Text = "Brightness"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 25.000
+TextLabel_7.TextWrapped = true
+TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_5.Parent = TextLabel_7
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.Position = UDim2.new(0, 0, 1.01019955, 0)
+Frame_5.Size = UDim2.new(0, 67, 0, 0)
+
+TextLabel_8.Parent = Misc
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(-1.23656881, 0, -1.90725064, 0)
+TextLabel_8.Size = UDim2.new(0, 389, 0, 28)
+TextLabel_8.Font = Enum.Font.Jura
+TextLabel_8.Text = "Miscs"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
+
+bssButton.Name = "bssButton"
+bssButton.Parent = Misc
+bssButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+bssButton.Position = UDim2.new(2.3900001, 0, -1.44000018, 0)
+bssButton.Size = UDim2.new(0, 29, 0, 44)
+bssButton.Font = Enum.Font.SourceSans
+bssButton.Text = ""
+bssButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+bssButton.TextSize = 14.000
+bssButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/drexydev/scripts/main/brightness'))()
+	bssButton.BackgroundColor3 = Color3.fromRGB(113, 255, 48)
+end)
+
+UICorner_4.Parent = bssButton
+
+UIAspectRatioConstraint_4.Parent = bssButton
+
+TextLabel_9.Parent = Misc
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(-1.26999998, 0, -0.905609727, 0)
+TextLabel_9.Size = UDim2.new(0, 67, 0, 55)
+TextLabel_9.Font = Enum.Font.GothamSemibold
+TextLabel_9.Text = "Find AKMN"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 25.000
+TextLabel_9.TextWrapped = true
+TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_6.Parent = TextLabel_9
+Frame_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_6.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_6.Position = UDim2.new(0, 0, 1.01019955, 0)
+Frame_6.Size = UDim2.new(0, 67, 0, 0)
+
+akmnButton.Name = "akmnButton"
+akmnButton.Parent = Misc
+akmnButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+akmnButton.Position = UDim2.new(2.3900001, 0, -0.650000095, 0)
+akmnButton.Size = UDim2.new(0, 29, 0, 44)
+akmnButton.Font = Enum.Font.SourceSans
+akmnButton.Text = ""
+akmnButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+akmnButton.TextSize = 14.000
+akmnButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/drexydev/deltawest/main/findakmn'))()
+	akmnButton.BackgroundColor3 = Color3.fromRGB(113, 255, 48)
+end)
+
+UICorner_5.Parent = akmnButton
+
+UIAspectRatioConstraint_5.Parent = akmnButton
+
+TextLabel_10.Parent = Misc
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(-1.26999998, 0, -0.135609686, 0)
+TextLabel_10.Size = UDim2.new(0, 67, 0, 55)
+TextLabel_10.Font = Enum.Font.GothamSemibold
+TextLabel_10.Text = "Find FlareGun"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 25.000
+TextLabel_10.TextWrapped = true
+TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_7.Parent = TextLabel_10
+Frame_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_7.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_7.Position = UDim2.new(0, 0, 1.01019955, 0)
+Frame_7.Size = UDim2.new(0, 67, 0, 0)
+
+fgButton.Name = "fgButton"
+fgButton.Parent = Misc
+fgButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+fgButton.Position = UDim2.new(2.3900001, 0, 0.119999915, 0)
+fgButton.Size = UDim2.new(0, 29, 0, 44)
+fgButton.Font = Enum.Font.SourceSans
+fgButton.Text = ""
+fgButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+fgButton.TextSize = 14.000
+fgButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/drexydev/deltawest/main/findflaregun'))()
+	fgButton.BackgroundColor3 = Color3.fromRGB(113, 255, 48)
+end)
+
+UICorner_6.Parent = fgButton
+
+UIAspectRatioConstraint_6.Parent = fgButton
+
+TextLabel_11.Parent = Misc
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Position = UDim2.new(-1.26999998, 0, 0.624390125, 0)
+TextLabel_11.Size = UDim2.new(0, 67, 0, 55)
+TextLabel_11.Font = Enum.Font.GothamSemibold
+TextLabel_11.Text = "Find AS-VAL"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 25.000
+TextLabel_11.TextWrapped = true
+TextLabel_11.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_8.Parent = TextLabel_11
+Frame_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_8.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_8.Position = UDim2.new(0, 0, 1.01019955, 0)
+Frame_8.Size = UDim2.new(0, 67, 0, 0)
+
+asvalButton.Name = "asvalButton"
+asvalButton.Parent = Misc
+asvalButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+asvalButton.Position = UDim2.new(2.3900001, 0, 0.879999757, 0)
+asvalButton.Size = UDim2.new(0, 29, 0, 44)
+asvalButton.Font = Enum.Font.SourceSans
+asvalButton.Text = ""
+asvalButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+asvalButton.TextSize = 14.000
+
+UICorner_7.Parent = asvalButton
+
+UIAspectRatioConstraint_7.Parent = asvalButton
+
+TextLabel_12.Parent = Misc
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.Position = UDim2.new(-1.26999998, 0, 1.4043901, 0)
+TextLabel_12.Size = UDim2.new(0, 67, 0, 55)
+TextLabel_12.Font = Enum.Font.GothamSemibold
+TextLabel_12.Text = "Staff Alert"
+TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 25.000
+TextLabel_12.TextWrapped = true
+TextLabel_12.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_9.Parent = TextLabel_12
+Frame_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_9.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_9.Position = UDim2.new(0, 0, 1.01019955, 0)
+Frame_9.Size = UDim2.new(0, 67, 0, 0)
+
+staffButton.Name = "staffButton"
+staffButton.Parent = Misc
+staffButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+staffButton.Position = UDim2.new(2.3900001, 0, 1.65999973, 0)
+staffButton.Size = UDim2.new(0, 29, 0, 44)
+staffButton.Font = Enum.Font.SourceSans
+staffButton.Text = ""
+staffButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+staffButton.TextSize = 14.000
+
+UICorner_8.Parent = staffButton
+
+UIAspectRatioConstraint_8.Parent = staffButton
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(-0.00118088722, 0, -0.0010278821, 0)
+TextButton.Size = UDim2.new(0, 498, 0, 44)
+TextButton.Font = Enum.Font.Jura
+TextButton.Text = "DELTAWEST"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 21.000
+TextButton.TextWrapped = true
+TextButton.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_10.Parent = Frame
+Frame_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_10.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_10.Position = UDim2.new(-0.00118088629, 0, 0.0977801085, 0)
+Frame_10.Size = UDim2.new(1.00118101, 0, 0, 0)
+
+Frame_11.Parent = Frame
+Frame_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_11.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_11.Position = UDim2.new(0.136152461, 0, 0.10236723, 0)
+Frame_11.Size = UDim2.new(0, 0, 0, 392)
