@@ -102,9 +102,9 @@ CombativeButton.Position = UDim2.new(0.0872285739, 0, 0.121498242, 0)
 CombativeButton.Size = UDim2.new(0, 68, 0, 68)
 CombativeButton.Image = "rbxassetid://7059266885"
 CombativeButton.MouseButton1Down:connect(function()
-	script.Parent.ScreenGui.Frame.Combative.Visible = true
-	script.Parent.ScreenGui.Frame.Misc.Visible = false
-	script.Parent.ScreenGui.Frame.Visuals.Visible = false
+	script.Combative.Visible = true
+	script.Misc.Visible = false
+	script.Visuals.Visible = false
 end)
 
 VisualsButton.Name = "VisualsButton"
@@ -115,9 +115,9 @@ VisualsButton.Position = UDim2.new(0.0872285739, 0, 0.121498242, 0)
 VisualsButton.Size = UDim2.new(0, 68, 0, 68)
 VisualsButton.Image = "rbxassetid://8217650131"
 VisualsButton.MouseButton1Down:connect(function()
-	script.Parent.ScreenGui.Frame.Visuals.Visible = true
-	script.Parent.ScreenGui.Frame.Misc.Visible = false
-	script.Parent.ScreenGui.Frame.Combative.Visible = false
+	script.Visuals.Visible = true
+	script.Misc.Visible = false
+	script.Combative.Visible = false
 end)
 
 MiscsButton.Name = "MiscsButton"
@@ -128,9 +128,9 @@ MiscsButton.Position = UDim2.new(0.0872285739, 0, 0.121498242, 0)
 MiscsButton.Size = UDim2.new(0, 68, 0, 68)
 MiscsButton.Image = "rbxassetid://1188759245"
 MiscsButton.MouseButton1Down:connect(function()
-	script.Parent.ScreenGui.Frame.Visuals.Visible = false
-	script.Parent.ScreenGui.Frame.Misc.Visible = true
-	script.Parent.ScreenGui.Frame.Combative.Visible = false
+	script.Visuals.Visible = false
+	script.Misc.Visible = true
+	script.Combative.Visible = false
 end)
 
 SkinChangerButton.Name = "SkinChangerButton"
